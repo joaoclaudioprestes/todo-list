@@ -26,6 +26,8 @@ class Task {
 
   newTask() {
     btnNewTask.textContent = "Adicionar"
+    btnNewTask.style.backgroundColor = "#f78b48d2"
+    btnNewTask.style.border = "1px solid #f78b48"
     containerTask.innerHTML = "";
     todoTasks.forEach((task, index) => {
       const listItem = document.createElement("li");
@@ -58,7 +60,9 @@ class Task {
 
       const editButton = listItem.querySelector(".edit");
       editButton.addEventListener("click", () => {
-        btnNewTask.textContent = "Adicionar Edição"
+        btnNewTask.textContent = "Concluir"
+        btnNewTask.style.backgroundColor = "#83BE68"
+        btnNewTask.style.border = "1px solid #93f8589d"
         listItem.classList.remove("completed");
         listItem.classList.add("edit");
 
